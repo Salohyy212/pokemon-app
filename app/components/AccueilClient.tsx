@@ -1,4 +1,4 @@
-// components/Accueil.tsx
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -36,22 +36,22 @@ const Accueil: React.FC = () => {
   };
 
   return (
-    <div className="accueil">
-      <h1>Liste des Pokémons</h1>
+    <div className="accueil" style={{ textAlign: 'center' }}>
+      <h1>List of the pokemons</h1>
       <div className="pokemon-list">
         {pokemons.map(pokemon => (
           <div className="pokemon-card" key={pokemon.id}>
-            <img src={pokemon.image} alt={pokemon.name} />
-            <p>{pokemon.name}</p>
-            <Link href={`/client/${pokemon.id}`}>
-              <a>Détails</a>
-            </Link>
-          </div>
+          <img src={pokemon.image} alt={pokemon.name} />
+          <p>{pokemon.name}</p>
+          <Link href={`/client/${pokemon.id}`} >
+             <button style={{ marginTop:'1%', padding:'3px'}}>Details</button>
+          </Link>
+        </div>
         ))}
       </div>
       <div className="pagination">
         {currentPage > 1 && <button onClick={handlePreviousPage}>Précédent</button>}
-        <button onClick={handleNextPage}>Suivant</button>
+        <button onClick={handleNextPage} style={{ marginTop:'1%', padding:'5px'}}>Suivant</button>
       </div>
     </div>
   );

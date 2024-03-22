@@ -1,5 +1,3 @@
-// pages/client/page.tsx
-
 import React from 'react';
 import AccueilClient from '../components/AccueilClient';
 

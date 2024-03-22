@@ -12,5 +12,6 @@ export interface Pokemon {
       };
     }[];
     order: number;
+    image: string;
   }
   
