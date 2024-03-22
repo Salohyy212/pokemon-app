@@ -50,8 +50,8 @@ const Accueil: React.FC = () => {
         ))}
       </div>
       <div className="pagination">
-        {currentPage > 1 && <button onClick={handlePreviousPage}>Précédent</button>}
-        <button onClick={handleNextPage} style={{ marginTop:'1%', padding:'5px'}}>Suivant</button>
+        {currentPage > 1 && <button onClick={handlePreviousPage}>Previous</button>}
+        <button onClick={handleNextPage} style={{ marginTop:'1%', padding:'5px'}}>Next</button>
       </div>
     </div>
   );
